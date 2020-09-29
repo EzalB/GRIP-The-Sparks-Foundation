@@ -145,40 +145,13 @@
 
     <script>
         let validateForm = () => {
-            let regex = /^[a-zA-Z]*$/;
-            if (regex.test(document.crUser.name.value)) {
-                return true;
-            } else {
-                document.getElementById("nameL").style.borderColor = "red";
-                document.getElementById("notification").innerHTML = "Alphabets Only *";
-                document.getElementById("notification").style.color = "red";
-                return false;
-            }
 
-            let name = document.forms['crUser']['name'].value;
-            if (name == "") {
-                alert('Name cannot be empty!');
-                document.getElementById('nameL').style.borderColor = "red";
-                return false;
-            }
-            let email = document.forms['crUser']['email'].value;
-            if (email == "") {
-                alert('Email cannot be empty!');
-                document.getElementById('emailL').style.borderColor = "red";
-                return false;
-            }
             let credits = document.forms['crUser']['creds'].value;
-            if (credits == "") {
-                alert('Credits cannot be empty!');
+            let isvalid = /^\d*$/.test(credits);
+            if (!isValid) {
+                alert('Invalid Credits!');
                 document.getElementById('credsL').style.borderColor = "red";
                 return false;
-            } else {
-                let isvalid = /^\d*$/.test(credits);
-                if (!isValid) {
-                    alert('Invalid Credits!');
-                    document.getElementById('credsL').style.borderColor = "red";
-                    return false;
-                }
             }
             return true;
         }
