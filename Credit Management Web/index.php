@@ -37,20 +37,20 @@
                         <div class="form-group row">
                             <label class="col-12 col-sm-2 col-form-label" for="nameL">Name</label>
                             <div class="col-12 col-sm">
-                                <input type="text" id="name" class="form-control" placeholder="Enter Name" name="name" value="" onchange="return onlyAlphabets()" />
+                                <input type="text" id="name" class="form-control" placeholder="Enter Name" name="name" value="" onchange="return onlyAlphabets()" required="true" />
                                 <div id="notification"></div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-12 col-sm-2 col-form-label" for="emailL">Email</label>
                             <div class="col-12 col-sm">
-                                <input type="email" id="email" class="form-control" placeholder="Enter Email" name="email" value="" />
+                                <input type="email" id="email" class="form-control" placeholder="Enter Email" name="email" value="" required="true" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-12 col-sm-2 col-form-label" for="credsL">Credits</label>
                             <div class="col-12 col-sm">
-                                <input type="number" id="creds" class="form-control" placeholder="Enter Credits" name="creds" min="0" value="" />
+                                <input type="number" id="creds" class="form-control" placeholder="Enter Credits" name="creds" min="0" value="" required="true" />
                             </div>
                         </div>
                         <div class="form-group row">

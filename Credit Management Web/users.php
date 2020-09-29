@@ -109,7 +109,9 @@
                             <div class="row">
                                 <div class="form-group col-sm-6">
                                     <select class="custom-select" name="selectedUser">
-                                        <option value="Select">Select</option>
+
+                                        <option value="Select"></option>
+
                                         <?php $drop = $conn->query("SELECT Name FROM users");
                                         if ($drop->num_rows > 0) {
                                             while ($r = $drop->fetch_assoc()) { ?>
@@ -120,7 +122,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group col-sm">
-                                    <input type="number" class="form-control" placeholder="Enter Credits" min="0" name="credsEntered" value="" />
+                                    <input type="number" class="form-control" placeholder="Enter Credits" min="0" name="credsEntered" value="" required="true" />
                                 </div>
                             </div>
 
