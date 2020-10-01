@@ -2,58 +2,412 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico">
 
-  <title>Home | Payment Gateway Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Home | eSend</title>
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/icon.png">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="page-header">
-      <h1><a href="index.php">Instamojo Payment</a></h1>
-      <p class="lead">A test payment integration for instamojo payment gateway. Written in PHP</p>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+    <!-- ***** Preloader End ***** -->
 
-    <h3>Details</h3>
 
-    <div class="col-md-4">
-      <img src="https://specials-images.forbesimg.com/imageserve/5f1a1e11f9a11fd8004ab415/960x0.jpg?fit=scale" width="300" height="250" alt="..." class="img-rounded">
-      <h4> Samsung Galaxy Note 20 Ultra </h4>
-      <h5> Price: ₹110000</h5>
-      <a href="order.php?id=100" class="btn btn-success"> Buy Now </a>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="assets/images/logo.png" width="150" height="30" alt="eSend" />
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">Home</a></li>
+                            <li><a href="#features">About</a></li>
+                            <li><a href="#testimonials">Quotes</a></li>
+                            <li><a href="#contact-us">Donate</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>The sole Meaning of life is to <strong>Serve Humanity.</strong></h1>
+                        <h3 style="right: 0;">- Leo Tolstoy</h3>
+                        <p>eSend is a Donation site designed by Rusheel Dalal for <br />GRIP-The Sparks Foundation</p>
+                        <a href="#contact-us" class="main-button-slider">Donate Here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
     </div>
+    <!-- ***** Welcome Area End ***** -->
 
-    <div class="col-md-4">
-      <img src="https://www.gizbot.com/images/2018-11/apple-ipad-pro-2018_154140393690.jpg" width="300" height="250" alt="..." class="img-rounded">
-      <h4> iPad Pro 12.9' (4th Gen) </h4>
-      <h5> Price: ₹89900</h5>
-      <a href="order.php?id=101" class="btn btn-success"> Buy Now </a>
-    </div>
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/support.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Support a Cause</h5>
+                                <p>Donated amount is used to help an organization campaigning some cause.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
 
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Best Relationship</h5>
+                                <p>Contact us immediately if you have a question in mind</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
 
-    <div class="col-md-4">
-      <img src="https://i.gadgets360cdn.com/large/Samsung_Odyssey_G9_launch_1592989821732.jpg" width="300" height="250" alt="..." class="img-rounded">
-      <h4> Samsung Odyssey G9 Curved Monitor </h4>
-      <h5> Price: ₹299990</h5>
-      <a href="order.php?id=102" class="btn btn-success"> Buy Now </a>
-    </div>
-  </div> <!-- /container -->
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/secured.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Secured Payment</h5>
+                                <p>One of the most secured payment gateway, InstaMojo is used on eSend</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Small End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Let’s discuss more about eSend</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>eSend is proudly a non-profit, non-corporate org. We rely on donations to support a good cause and make world a better place.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Quotes</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Below are some of the quotes by famous personalities.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>Change will not come if we rely on other person or on time; We are the change that we seek.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Barack Obama</h3>
+                                <span>U.S. President</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>It is every man’s obligation to put back into the world at least the equivalent of what he takes out of it.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Albert Einstein</h3>
+                                <span>Theoretical Physicist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+
+                <!-- ***** Testimonials Item Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>The best way to find yourself, is to lose yourself in the service of others and make world a better place.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Mahatma Gandhi</h3>
+                                <span>Indian Nationalist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ***** Testimonials Item End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+    <?php
+    $servername = "localhost";
+    $username = "id14960544_root";
+    $password = "RootAdmin@99";
+    $dbname = "id14960544_grippayment";
+
+    //Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    //Checking for connection failure
+    if ($conn->connect_error) {
+        die("Connection to DB failed: " . $conn->connect_error);
+    }
+
+    $result = $conn->query("SELECT COUNT(DISTINCT(Name)) AS Total_Donors , SUM(Amount) AS Total_Donation , MAX(Amount) AS Highest_Donation FROM donationinfo");
+    if ($result->num_rows > 0) {
+        $res = $result->fetch_assoc();
+    }
+    ?>
+
+    <!-- ***** Counter Parallax Start ***** -->
+    <section class="counter">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong>2</strong>
+                            <span>Project</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-top">
+                            <strong><?php echo $res['Total_Donors'] ?></strong>
+                            <span>Cheerful Donors</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong><?php echo $res['Total_Donation'] ?></strong>
+                            <span>Total Donation in ₹</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item">
+                            <strong><?php echo $res['Highest_Donation'] ?></strong>
+                            <span>Highest Donation in ₹</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Counter Parallax End ***** -->
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <!-- ***** Section Title Start ***** -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Donate Here</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Present cause - Pandemic Relief Fund</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Section Title End ***** -->
+
+            <div class="row">
+                <!-- ***** Contact Text Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-20">Keep in touch with us!</h5>
+                    <div class="contact-text">
+                        <strong>Address</strong> <i class="fa fa-location-arrow"></i>
+                        <p>THE HANGAR, NUS ENTERPRISE <br />
+                            21 HENG MUI KENG TERRACE, SINGAPORE, 119613</p>
+
+                        <strong>Contact</strong> <br />
+                        <i class="fa fa-phone"></i> <a href="tel:+6584028590" class="links"> +65-8402-8590</a><br />
+                        <i class="fa fa-envelope"></i> <a href="mailto:info@thesparksfoundation.sg" class="links"> info@thesparksfoundation.sg</a>
+                    </div>
+                    <br />
+                </div>
+                <!-- ***** Contact Text End ***** -->
+
+                <!-- ***** Contact Form Start ***** -->
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="pay.php" method="post">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="amount" type="number" class="form-control" id="amount" placeholder="Donation Amount" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="number" class="form-control" id="phone" placeholder="Phone Number" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Donate</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- ***** Contact Form End ***** -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a target="_blank" href="https://www.facebook.com/thesparksfoundation.info/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="https://twitter.com/tsfsingapore?lang=en"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/the-sparks-foundation/"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a target="_blank" href="https://www.thesparksfoundationsingapore.org/"><i class="fa fa-globe"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Made in <span style="color: #ff589e;">
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                        </span> | <a href="https://www.thesparksfoundationsingapore.org/" class="footerLink">The Sparks Foundation</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
 
 </body>
 

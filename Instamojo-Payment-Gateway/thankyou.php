@@ -2,63 +2,185 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="../../favicon.ico">
 
-  <title>Thank You, Mojo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Thank You | eSend</title>
 
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body>
-  <div class="container">
 
-    <div class="page-header">
-      <h1><a href="index.php">Instamojo Payment</a></h1>
-      <p class="lead">A test payment integration for instamojo paypemnt gateway. Written in PHP</p>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.php" class="logo">
+                            <img src="assets/images/logo.png" width="150" height="30" alt="eSend" />
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <?php
+
+        include 'src/instamojo.php';
+
+        $api = new Instamojo\Instamojo('YOUR-PRIVATE-API-KEY', 'YOUR-PRIVATE-AUTH-TOKEN', 'https://test.instamojo.com/api/1.1/');
+
+        $payid = $_GET["payment_request_id"];
+
+
+        try {
+            $response = $api->paymentRequestStatus($payid);
+        ?>
+
+            <div class="col-12 col-sm-4">
+                <div class="card" style="margin-top:100px; border-color: #000;">
+                    <h3 class="card-header text-white" style="background-color: #ff589e;">Hey <?php echo $response['payments'][0]['buyer_name'] ?>,<br />
+                        Thanks for the
+                        Donation!
+                    </h3>
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><strong>Payment Details</strong></h5>
+                        <dl class="row">
+                            <dt class="col-5" style="padding-bottom: 4px;">Payment ID: </dt>
+                            <dd class="col-7"><?php echo $response['payments'][0]['payment_id'] ?></dd>
+                            <dt class="col-5" style="padding-bottom: 4px;">Name: </dt>
+                            <dd class="col-7"><?php echo $response['payments'][0]['buyer_name'] ?></dd>
+                            <dt class="col-5" style="padding-bottom: 4px;">Email: </dt>
+                            <dd class="col-7"><?php echo $response['payments'][0]['buyer_email'] ?></dd>
+                            <dt class="col-5" style="padding-bottom: 4px;">Phone: </dt>
+                            <dd class="col-7"><?php echo $response['phone'] ?></dd>
+                            <dt class="col-5" style="padding-bottom: 4px;">Amount Paid:</dt>
+                            <dd class="col-7"><?php echo $response['amount'] ?></dd>
+                        </dl>
+                        <button class="btn main-button offset-sm-8" onclick="location.href='index.php'">Home Page</button>
+                    </div>
+                </div>
+            </div>
     </div>
 
-    <h3 style="color:#6da552">Thank You, Payment was successful!!</h3>
+<?php
 
-    <?php
+            $servername = "localhost";
+            $username = "id14960544_root";
+            $password = "RootAdmin@99";
+            $dbname = "id14960544_grippayment";
 
-    include 'src/instamojo.php';
+            //Create connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $api = new Instamojo\Instamojo('test_f541e256a41b66d33518203fee0', 'test_290c6e1842b425dd1f1b36ebf7d', 'https://test.instamojo.com/api/1.1/');
+            //Checking for connection failure
+            if ($conn->connect_error) {
+                die("Connection to DB failed: " . $conn->connect_error);
+            }
 
-    $payid = $_GET["payment_request_id"];
+            function insert_data($table_name, $data)
+            {
+                $key = array_keys($data);
+                $value = array_values($data);
 
-    try {
-      $response = $api->paymentRequestStatus($payid);
+                $query = "INSERT INTO $table_name ( " . implode(',', $key) . ") VALUES('" . implode("','", $value) . "')";
 
-      echo "<h4>Payment ID: " . $response['payments'][0]['payment_id'] . "</h4>";
-      echo "<h4>Payment Name: " . $response['payments'][0]['buyer_name'] . "</h4>";
-      echo "<h4>Payment Email: " . $response['payments'][0]['buyer_email'] . "</h4>";
+                return $query;
+            }
 
-      echo "<pre>";
-      print_r($response);
-      echo "</pre>";
-    ?>
+            $data = array(
+                "Payment_ID" => $response['payments'][0]['payment_id'],
+                "Name" => $response['payments'][0]['buyer_name'],
+                "Email" => $response['payments'][0]['buyer_email'],
+                "Phone" => $response['phone'], "Amount" => $response['amount']
+            );
+            $table_name = "donationinfo";
 
-    <?php
-    } catch (Exception $e) {
-      print('Error: ' . $e->getMessage());
-    }
-    ?>
+            $sql = insert_data($table_name, $data);
 
-  </div> <!-- /container -->
+            if ($conn->query($sql) === TRUE) {
+            } else {
+                echo "<script>alert('Error!')</script>";
+            }
+        } catch (Exception $e) {
+            print('Error: ' . $e->getMessage());
+        }
+?>
+<!-- ***** Welcome Area End ***** -->
+
+
+
+<!-- ***** Footer Start ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                    <li><a target="_blank" href="https://www.facebook.com/thesparksfoundation.info/"><i class="fa fa-facebook"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/tsfsingapore?lang=en"><i class="fa fa-twitter"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/the-sparks-foundation/"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a target="_blank" href="https://www.thesparksfoundationsingapore.org/"><i class="fa fa-globe"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright">Made in <span style="color: #ff589e;">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                    </span> | <a href="https://www.thesparksfoundationsingapore.org/" class="footerLink">The Sparks
+                        Foundation</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="assets/js/jquery-2.1.0.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="assets/js/popper.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<!-- Plugins -->
+<script src="assets/js/scrollreveal.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.counterup.min.js"></script>
+<script src="assets/js/imgfix.min.js"></script>
+
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
 
 </body>
 

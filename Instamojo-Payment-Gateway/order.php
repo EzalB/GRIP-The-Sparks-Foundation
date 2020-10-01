@@ -106,7 +106,6 @@ if (isset($_GET['id']) && $_GET['id'] == 100) {
 		<br />
 	</div> <!-- /container -->
 
-
 </body>
 
 </html>
