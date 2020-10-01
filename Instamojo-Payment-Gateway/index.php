@@ -5,8 +5,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="eSend Donation site">
+    <meta name="author" content="Rusheel Dalal">
+    <meta keywords="eSend, esend, donation">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
     <title>Home | eSend</title>
@@ -47,7 +48,7 @@
                         <ul class="nav">
                             <li><a href="#welcome" class="active">Home</a></li>
                             <li><a href="#features">About</a></li>
-                            <li><a href="#testimonials">Quotes</a></li>
+                            <li><a href="#quotes">Quotes</a></li>
                             <li><a href="#contact-us">Donate</a></li>
                         </ul>
                         <a class='menu-trigger'>
@@ -71,7 +72,7 @@
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
                         <h1>The sole Meaning of life is to <strong>Serve Humanity.</strong></h1>
                         <h3 style="right: 0;">- Leo Tolstoy</h3>
-                        <p>eSend is a Donation site designed by Rusheel Dalal for <br />GRIP-The Sparks Foundation</p>
+                        <p>eSend is a Donation site designed <br />by <span style="color: lime;">Rusheel Dalal</span> <br />for <strong>GRIP-The Sparks Foundation</strong></p>
                         <a href="#contact-us" class="main-button-slider">Donate Here</a>
                     </div>
                 </div>
@@ -139,16 +140,11 @@
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
-                        <h2 class="section-title">Let’s discuss more about eSend</h2>
+                        <h2 class="section-title">Let’s discuss about eSend</h2>
                     </div>
                     <div class="left-text">
                         <p>eSend is proudly a non-profit, non-corporate org. We rely on donations to support a good cause and make world a better place.</p>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="hr"></div>
                 </div>
             </div>
         </div>
@@ -156,7 +152,7 @@
     <!-- ***** Features Big Item End ***** -->
 
     <!-- ***** Testimonials Start ***** -->
-    <section class="section" id="testimonials">
+    <section class="section" id="quotes">
         <div class="container">
             <!-- ***** Section Title Start ***** -->
             <div class="row">
@@ -306,25 +302,21 @@
             <!-- ***** Section Title End ***** -->
 
             <div class="row">
-                <!-- ***** Contact Text Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <h5 class="margin-bottom-20">Keep in touch with us!</h5>
-                    <div class="contact-text">
-                        <strong>Address</strong> <i class="fa fa-location-arrow"></i>
-                        <p>THE HANGAR, NUS ENTERPRISE <br />
-                            21 HENG MUI KENG TERRACE, SINGAPORE, 119613</p>
-
-                        <strong>Contact</strong> <br />
-                        <i class="fa fa-phone"></i> <a href="tel:+6584028590" class="links"> +65-8402-8590</a><br />
-                        <i class="fa fa-envelope"></i> <a href="mailto:info@thesparksfoundation.sg" class="links"> info@thesparksfoundation.sg</a>
-                    </div>
-                    <br />
-                </div>
-                <!-- ***** Contact Text End ***** -->
 
                 <!-- ***** Contact Form Start ***** -->
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="contact-form">
+                        <div class="row" style="margin-left: 20px;">
+                            <p style="color: red;">*Note: This website is for testing purpose only, don't enter any real data.
+                            </p>
+                        </div>
+                        <br />
+                        <div class="row justify-content-center">
+                            <img src="assets/images/click here.svg" width="22px" height="18px" /> &nbsp;
+                            <a href="test_credentials.PNG" alt="Oops!" target="_blank" class="links">Click Here for Test Credentials</a>
+                        </div>
+                        <br /><br />
+                        
                         <form id="contact" action="pay.php" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-md-12 col-sm-12">
@@ -352,16 +344,33 @@
                                         <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
                                     </fieldset>
                                 </div>
-                                <div class="col-lg-12">
+                                <div class="col-lg-12" align="center">
                                     <fieldset>
                                         <button type="submit" id="form-submit" class="main-button">Donate</button>
                                     </fieldset>
                                 </div>
                             </div>
+                            <br /><br />
                         </form>
                     </div>
                 </div>
                 <!-- ***** Contact Form End ***** -->
+                
+                <!-- ***** Contact Text Start ***** -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-20">Keep in touch with us!</h5>
+                    <div class="contact-text">
+                        <strong>Address</strong> <i class="fa fa-location-arrow"></i>
+                        <p>THE HANGAR, NUS ENTERPRISE <br />
+                            21 HENG MUI KENG TERRACE, SINGAPORE, 119613</p>
+
+                        <strong>Contact</strong> <br />
+                        <i class="fa fa-phone"></i> <a href="tel:+6584028590" class="links"> +65-8402-8590</a><br />
+                        <i class="fa fa-envelope"></i> <a href="mailto:info@thesparksfoundation.sg" class="links"> info@thesparksfoundation.sg</a>
+                    </div>
+                    <br />
+                </div>
+                <!-- ***** Contact Text End ***** -->
             </div>
         </div>
     </section>
